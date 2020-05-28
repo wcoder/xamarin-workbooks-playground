@@ -6,6 +6,8 @@ platforms:
 - iOS
 ---
 
+Modified sources from [FloatLabeledEntry](https://github.com/gshackles/FloatLabeledEntry/blob/master/src/iOS/FloatLabeledEntry.iOS/FloatLabeledTextField.cs):
+
 ```csharp
 using System;
 using UIKit;
@@ -172,6 +174,8 @@ using System.ComponentModel;
 	}
 ```
 
+Declares ViewController:
+
 ```csharp
 class VC : UIViewController
 {
@@ -196,6 +200,8 @@ class VC : UIViewController
     }
 }
 ```
+
+Register ViewController as Root. Sample for Xamarin.WorkBooks:
 
 ```csharp
 KeyWindow.RootViewController = new VC();

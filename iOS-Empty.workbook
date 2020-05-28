@@ -7,6 +7,12 @@ platforms:
 ---
 
 ```csharp
+// ...
+````
+
+Declares ViewController:
+
+```csharp
 class VC : UIViewController
 {
     public override void ViewDidLoad()
@@ -30,6 +36,8 @@ class VC : UIViewController
     }
 }
 ```
+
+Register ViewController as Root. Sample for Xamarin.WorkBooks:
 
 ```csharp
 KeyWindow.RootViewController = new VC();
