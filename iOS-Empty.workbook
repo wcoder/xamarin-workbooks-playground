@@ -1,0 +1,36 @@
+---
+uti: com.xamarin.workbook
+id: 1150027c-9bd4-4055-a97a-2318609b6c4a
+title: iOS-Empty
+platforms:
+- iOS
+---
+
+```csharp
+class VC : UIViewController
+{
+    public override void ViewDidLoad()
+    {
+        View.BackgroundColor = UIColor.White;
+
+        var input = new UITextField(CGRect.Empty);
+        input.TranslatesAutoresizingMaskIntoConstraints = false;
+
+        input.BorderStyle = UITextBorderStyle.RoundedRect;
+        input.Placeholder = "asdasd";       
+
+        View.AddSubview(input);
+
+        NSLayoutConstraint.ActivateConstraints(new []{
+            input.CenterXAnchor.ConstraintEqualTo(View.CenterXAnchor),
+            input.CenterYAnchor.ConstraintEqualTo(View.CenterYAnchor),
+            input.WidthAnchor.ConstraintEqualTo(100),
+        });
+        
+    }
+}
+```
+
+```csharp
+KeyWindow.RootViewController = new VC();
+```
